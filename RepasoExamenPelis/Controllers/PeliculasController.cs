@@ -24,5 +24,15 @@ namespace RepasoExamenPelis.Controllers
             List<Pelicula> peliculas = await this.repo.GetPeliculasAsync();
             return View(peliculas);
         }
+        public async Task<IActionResult> PeliculasGenero(int idgenero)
+        {
+            List<Pelicula> peliculasGenero = await this.repo.PeliculasGenero(idgenero);
+            return View(peliculasGenero);
+        }
+        public async Task<IActionResult> DetallesPelicula(int id)
+        {
+            Pelicula peli = await this.repo.FindpeliculaAsync(id);
+            return View(peli);
+        }
     }
 }

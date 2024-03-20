@@ -32,7 +32,7 @@ namespace RepasoExamenPelis.Controllers
                     new ClaimsIdentity(
                         CookieAuthenticationDefaults.AuthenticationScheme,
                         ClaimTypes.Name, ClaimTypes.Role);
-                //CREAMOS EL CLAIM PARA EL NOMBRE (APELLIDO)
+                //CREAMOS EL CLAIM PARA EL NOMBRE 
                 Claim claimName =
                     new Claim(ClaimTypes.Name, usuario.Nombre);
                 identity.AddClaim(claimName);

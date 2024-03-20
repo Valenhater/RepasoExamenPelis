@@ -25,6 +25,7 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Peliculas" asp-action="Index">Peliculas</a>
                         </li>
+                        @await Component.InvokeAsync("DesplegableGeneros")
                         <partial name="_MenuUsuarios" />
                     </ul>
                 </div>

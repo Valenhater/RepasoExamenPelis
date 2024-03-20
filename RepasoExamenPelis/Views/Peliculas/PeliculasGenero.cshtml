@@ -1,0 +1,33 @@
+﻿@model List<Pelicula>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Seguridad Empleados</h1>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>ID Pelicula</th>
+            <th>Nombre</th>
+            <th>Sinopsis</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @item.IdPelicula)
+                </td>
+                <td>
+                    @item.Nombre)
+                </td>
+                <td>
+                    @item.Sinopsis)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
