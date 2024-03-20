@@ -33,6 +33,13 @@ namespace RepasoExamenPelis.Repositories
                            select datos;
             return consulta.ToList();
         }
+        public List<Pelicula> GetPeliculasCarrito(List<int> idPelicula)
+        {
 
+            var consulta = from datos in context.Peliculas
+                           where idPelicula.Contains(datos.IdPelicula)
+                           select datos;
+            return consulta.ToList();
+        }
     }
 }
